@@ -48,6 +48,11 @@ const auth = (req, res, next) => {
 };
 
 // Routes
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to Student Portal API');
+});
+
 // Student Registration
 app.post('/api/signup', async (req, res) => {
   try {
