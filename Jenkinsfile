@@ -33,8 +33,10 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                sh 'node server.js'
-            }
-        }
+                sh 'npm install -g pm2 || true'
+                sh 'pm2 stop server || true'
+                sh 'pm2 start server.js --name server'
+    }
+}
     }
 }
