@@ -33,7 +33,7 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                sh 'pm2 restart app'
+                sh 'node server.js'
             }
         }
     }
