@@ -50,7 +50,7 @@ const auth = (req, res, next) => {
 // Routes
 // Root route
 app.get('/', (req, res) => {
-  res.send('Welcome to Student Portal API');
+  res.send('Hello JEFFREYON, seems our deployment is working');
 });
 
 // Student Registration
