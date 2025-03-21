@@ -13,10 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portal', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
@@ -50,7 +47,7 @@ const auth = (req, res, next) => {
 // Routes
 // Root route
 app.get('/', (req, res) => {
-  res.send('Hello JEFFREYON, seems our deployment is working');
+  res.send('Hello JEFFREYON, seems our deployment is working correctly.');
 });
 
 // Student Registration

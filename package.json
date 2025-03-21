@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Running regression tests...\" && exit 0",
-    "build": "echo \"Building the project...\" && exit 0"
+    "build": "echo \"Building the project...\" && exit 0",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
